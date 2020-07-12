@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+    <!-- Inclusion of the head partial -->
+    <%- include('partials/head.ejs') %>
+  </head>
+
+  <body onload="<%= modeLoad %>">
+    <div class="page">
+      <!-- Inclusion of the header partial -->
+      <%- include('partials/header.ejs') %>
+
+      <!-- Welcome Message of the subpage -->
+      <div class="main headerGap">
+        <b class="welcome"><%= title %></b>
+        <p class="message">Create a fake news article that you can bring up in an argument you are clearly superior in.</br>This is in case soneone likes to believe conspiracys and fake news sources, which is why there will always be an explaination to why they shouldn't believe everything on the internet.</p>
+      </div>
+
+      <!-- Container of all message creation options -->
+      <div class="msgOptions">
+        <form action="javascript:formCheck()">
+
+          <!-- Article -->
+          <div class="opGroup">
+            <i class="opTitle">Article Title</i>
+            <br/>
+            <a class="opError" id="txtErr"></a>
+            <div class="opSelect">
+                <textarea class="txtInput" onkeypress="charCountdown()" onkeyup="charCountdown()" cols="50" rows="5" maxlength="100" id="text"></textarea>
+                <br/>
+                <input class="txtCount" type="text" value="100 / 100" id="textCount" disabled>
+            </div>
+          </div>
+
+          <hr class="resBreak">
+
+          <!-- Resulting Link -->
+          <div class="resGroup">
+            <button class="resTitle" type="submit">Generate Link</button>
+            <br/>
+            <div class="opSelect">
+              <p><a class="result" id="resLink">The link will be displayed here</a></p>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="push"></div>
+    </div>
+
+    <script src="scripts/modeSwitch.js"></script>
+    <script src="scripts/articlePage.js"></script>
+    <script src="scripts/charCountdown.js"></script>
+  </body>
+
+</html>

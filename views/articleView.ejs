@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+    <title><%- title %></title>
+    <link href="../css/style.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Roboto|Roboto+Mono|Source+Sans+Pro|Ubuntu&display=swap" rel="stylesheet">
+  </head>
+
+  <body onload="<%= modeLoad %>">
+    <div class="page">
+      <!-- Inclusion of the header partial -->
+      <%- include('partials/header.ejs') %>
+
+      <!-- Article Title and explaination -->
+      <div class="article headerGap">
+        <b class="welcome"><%- article %></b>
+        <p class="message">Hold on a minute...</p>
+        <p class="message">Don't worry, this article isn't a real news article.</br>This website offers a service, which allows you to create fake-news aticles.</p>
+        <p class="message">This service was made to show people, that not everything you read online is necessarily true.</p>
+        <p class="message">Especially in times like these, it is important that you only believe verifiable and respected news sources.</br>A lot of people can put something they think in their head on facebook, or even create pseudo news sites, which leads to a lot of fake news and conspiracies being thrown around as facts. This is dangerous and can only be stopped by checking if the news you are reading are from a verifiable source.</p>
+        <p class="message">Now, I'm not saying that what this specific article is saying has to be wrong. Maybe someone is just using this website in an unintended way.</br>It is highly recommended to go and check for yourself if there are any trustworthy news articles written about what this one is trying to claim. And that goes for evey untrustworthy news site on the entire internet.</p>
+        <p class="message">Let's fight fake news together!</p>
+
+        <hr class="createBreak">
+
+        <!-- Link back to article Creation page -->
+        <i><a class="message create" href="<%= home + path %>">Create your own article</a></i>
+      </div>
+
+      <div class="push"></div>
+    </div>
+
+    <script src="../scripts/modeSwitch.js"></script>
+  </body>
+
+</html>
